@@ -2,7 +2,7 @@ class Solution {
     public String sortVowels(String s) 
     {
         char arr [] = s.toCharArray();
-        int count =0;
+        int count =0; 
         for(char c : arr){
             if(check(c))
             count++;
