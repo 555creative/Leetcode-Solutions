@@ -1,0 +1,30 @@
+class Solution {
+    public String sortVowels(String s) 
+    {
+        char arr [] = s.toCharArray();
+        int count =0;
+        for(char c : arr){
+            if(check(c))
+            count++;
+        }
+        int k =0;
+        char vowels [] = new char [count];
+        for(char c : arr){
+            if(check(c))
+            vowels[k++] = c;
+        }
+        Arrays.sort(vowels);
+        k=0;
+        for(int i =0;i<arr.length;i++)
+        {
+            if(check(arr[i]))
+            arr[i] = vowels[k++];
+        }
+        return String.valueOf(arr);
+
+    }
+    public static boolean check (char ch)
+    {
+       return ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
