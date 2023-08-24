@@ -2,7 +2,7 @@ https://leetcode.com/problems/faulty-keyboard/solutions/3885751/3-ms-java-soluti
 
 Class Solution {
     public String finalString(String s) {
-        
+         
         StringBuilder sb = new StringBuilder();
         for( char c : s.toCharArray())
         {
