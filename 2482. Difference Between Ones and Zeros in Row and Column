@@ -1,0 +1,36 @@
+class Solution {
+    public int[][] onesMinusZeros(int[][] grid) 
+    {
+        int a = grid.length;
+        int b = grid[0].length;
+        int [][] arr = new int [a][b];
+        int ones =0 ; 
+        int zeros = 0;
+
+        for(int j=0;j<a;j++)
+        {
+             ones = 0;
+             zeros = 0;
+             for(int i=0;i<b;i++)
+            {
+                if(grid[j][i] == 1) ones++; else zeros++; 
+            }
+            for(int i=0;i<b;i++)
+            arr[j][i]+=ones-zeros;
+        }
+        for(int j=0;j<b;j++)
+        {
+              ones = 0;
+              zeros = 0;
+             for(int i=0;i<a;i++)
+            {
+                if(grid[i][j] == 1) ones++; else zeros++; 
+            }
+            for(int i=0;i<a;i++)
+            arr[i][j]+=ones-zeros;  
+        }
+
+        return arr;
+    }
+
+}
